@@ -10,6 +10,7 @@ class WikipediaPage:
     def search(self, term):
         self.page.locator('input[name="search"]').fill(term)
         self.page.keyboard.press("Enter")
+        self.page.wait_for_load_state("load")
 
     def get_title(self):
         return self.page.title()
@@ -23,4 +24,5 @@ def test_wikipedia_search_python(page: Page):
     wiki = WikipediaPage(page)
     wiki.goto()
     wiki.search("Python programming")
+    wiki.page.wait_for_load_state("load")
     assert "Python" in wiki.get_title()

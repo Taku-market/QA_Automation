@@ -13,10 +13,12 @@ def test_search_on_google(page: Page):
     page.goto("https://www.google.com")
     page.locator('textarea[name="q"]').fill("pytest")
     page.keyboard.press("Enter")
+    page.wait_for_load_state("load")
     assert "pytest" in page.title()
 
 def test_wikipedia_search(page: Page):
     page.goto("https://www.wikipedia.org")
     page.locator('input[name="search"]').fill("Python programming")
     page.keyboard.press("Enter")
+    page.wait_for_load_state("load")
     assert "Python" in page.title()
