@@ -1,0 +1,7 @@
+[
+    {"id": "TC001", "status": "Pass", "attachments": 0},
+    {"id": "TC002", "status": "Pass", "attachments": 0},
+    {"id": "TC003", "status": "Fail", "attachments": 0},
+    {"id": "TC004", "status": "Pass", "attachments": 0},
+    {"id": "TC005", "status": "Pass", "attachments": 0}
+]
