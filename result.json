@@ -1,21 +1,11 @@
 {
     "summary": {
         "total_checked": 5,
-        "total_flagged": 4
+        "total_flagged": 2
     },
     "flagged": [
         {
-            "id": "TC001",
-            "status": "Pass",
-            "attachments": 0
-        },
-        {
             "id": "TC002",
-            "status": "Pass",
-            "attachments": 0
-        },
-        {
-            "id": "TC004",
             "status": "Pass",
             "attachments": 0
         },
