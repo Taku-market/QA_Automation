@@ -1,9 +1,10 @@
 import pytest
 import requests
+from config import BASE_URL
 
 @pytest.fixture
 def user_response():
-    return requests.get("https://jsonplaceholder.typicode.com/users/1")
+    return requests.get(f"{BASE_URL}/users/1")
 
 def test_get_user(user_response):
     assert user_response.status_code == 200

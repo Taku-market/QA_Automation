@@ -1,5 +1,6 @@
 import requests
 import pytest
+from config import BASE_URL
 
 @pytest.fixture
 def post_response():
@@ -10,7 +11,7 @@ def post_response():
     }
 
     response = requests.post(
-        "https://jsonplaceholder.typicode.com/users",
+        f"{BASE_URL}/users",
         json=new_user
     )
 
