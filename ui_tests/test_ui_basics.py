@@ -20,5 +20,5 @@ def test_wikipedia_search(page: Page):
     page.goto("https://www.wikipedia.org")
     page.locator('input[name="search"]').fill("Python programming")
     page.keyboard.press("Enter")
-    page.wait_for_load_state("load")
+    page.wait_for_load_state("networkidle")
     assert "Python" in page.title()
