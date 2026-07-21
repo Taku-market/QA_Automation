@@ -13,7 +13,7 @@ def test_search_on_google(page: Page):
     page.goto("https://www.google.com")
     page.locator('textarea[name="q"]').fill("pytest")
     page.keyboard.press("Enter")
-    page.wait_for_load_state("load")
+    page.wait_for_load_state("networkidle")
     assert "pytest" in page.title()
 
 def test_wikipedia_search(page: Page):

@@ -1,3 +1,14 @@
+import pytest
+import json
+import os
+
+@pytest.fixture
+def sample_user():
+    path = os.path.join(os.path.dirname(__file__), "test_data", "users.json")
+    with open(path, "r") as f:
+        users = json.load(f)
+    return users[0]
+
 def test_name_not_empty(sample_user):
     assert len(sample_user["name"]) > 0
 
